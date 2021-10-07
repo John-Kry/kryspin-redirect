@@ -9,7 +9,6 @@ const isUrl = require('is-url')
 app.use(bodyParser.json())
 
 app.get('/:redirect_to', async function (req, res) {
-    console.log("hi")
     if (!req.params.redirect_to)
         return res.json({ err: true, msg: `Invalid redirect provided` })
     const key = req.params.redirect_to
